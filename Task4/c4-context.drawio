@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" agent="Task4" version="24.7.17">
+  <diagram id="c4-context-t4" name="C4 контекст">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1680" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t" value="C4: контекст — передача ставок в кол-центры" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="16" width="1100" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="s" value="Только этот кейс. Зелёный — контур-источник ставок. Синий — КЦ банка и канал файлов. Жёлтый пунктир — партнёр. Номера на стрелках = UC из Task4/ADR.md. Сайт, ИБ и АБС сюда не кладём: они не меняют шов «ставки → КЦ»." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#4B5563;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="48" width="1480" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-cli" value="Клиент
+(часто пожилой)" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-cc" value="Оператор
+КЦ банка" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-pcc" value="Оператор
+партнёрского КЦ" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="40" y="580" width="130" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-bo" value="Менеджер ставок
+(депозиты / кредиты)" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="240" width="160" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="bnd" value="Банк «Стандарт»" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;fillColor=none;strokeColor=#64748B;verticalAlign=top;align=left;fontSize=12;fontStyle=1;fontColor=#334155;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="220" y="120" width="1220" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep" value="Контур заявок и ставок
+рабочее место + API каталога
++ экспортёр файла
+команда банка, .NET / MS SQL" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#99F6E4;strokeColor=#0D9488;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="620" y="200" width="280" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="cc" value="Система кол-центра банка
+React + Spring Boot + PostgreSQL
+виджет ставок у оператора" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#BFDBFE;strokeColor=#2563EB;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="260" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="sftp" value="Канал выкладки файлов
+каталог + УЗ партнёра
+сопровождает IT банка" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#BFDBFE;strokeColor=#2563EB;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="380" width="240" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="pcc" value="Система партнёрского КЦ
+внешняя ИС, не API банка
+забор файла + свои скрипты" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;dashed=1;dashPattern=8 8;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;fontStyle=1;fontColor=#78350F;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="560" width="260" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="UC2 звонок: «какие сейчас ставки?»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-cli" target="p-cc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e1b" value="UC5 тот же вопрос, если КЦ банка перегружен" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-cli" target="p-pcc">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="100" y="520"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="UC2 смотрит актуальные ставки в UI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-cc" target="cc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="UC5 консультирует по загруженному файлу" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-pcc" target="pcc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="UC1 публикует базовые ставки (не Excel)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-bo" target="dep">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="UC2 HTTPS: каталог той же версии, что витрина" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#2563EB;" edge="1" parent="1" source="cc" target="dep">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="UC3 файл-снимок опубликованной версии" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#0D9488;dashed=1;dashPattern=6 6;" edge="1" parent="1" source="dep" target="sftp">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="UC4 партнёр забирает файл (не вызывает API)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#0D9488;dashed=1;dashPattern=6 6;" edge="1" parent="1" source="sftp" target="pcc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="leg" value="&lt;b&gt;Как читать&lt;/b&gt;&lt;br&gt;&lt;font color='#4F46E5'&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; человек (звонок или работа в UI).&lt;br&gt;&lt;font color='#2563EB'&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; синхронный HTTPS внутри банка: КЦ → каталог контура.&lt;br&gt;&lt;font color='#0D9488'&gt;&lt;b&gt;- - -&lt;/b&gt;&lt;/font&gt; файл: банк выкладывает, партнёр забирает. Это не API контура.&lt;br&gt;В файле только &lt;b&gt;базовые&lt;/b&gt; ставки. Заявки, ПДн и спецставки партнёру не отдаём." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=11;fontColor=#1F2937;spacingLeft=10;spacingRight=10;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="220" y="660" width="1220" height="130" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
