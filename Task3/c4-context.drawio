@@ -1,0 +1,125 @@
+<mxfile host="app.diagrams.net" agent="Task3" version="24.7.17">
+  <diagram id="c4-context" name="C4 контекст">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t" value="C4: контекст — открытие депозитов, MVP" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="16" width="900" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="s" value="Люди и системы вокруг решения. Зелёный — новый контур. Оранжевый — АБС (учёт). Жёлтый пунктир — внешние / вне MVP. Номера на стрелках = Use Case из ADR." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#4B5563;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="48" width="1400" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-new" value="Новый клиент" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="100" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-ex" value="Действующий клиент" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="110" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-cc" value="Оператор КЦ банка" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="560" width="110" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-bo" value="Менеджер бэк-офиса депозитов" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="200" width="150" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-fo" value="Сотрудник отделения" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="360" width="140" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-cr" value="Сотрудник кредитования (ставки)" style="shape=actor;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;fillColor=#E0E7FF;strokeColor=#4338CA;fontSize=11;fontStyle=1;fontColor=#1E1B4B;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="520" width="160" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="bnd" value="Банк «Стандарт»" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;fillColor=none;strokeColor=#64748B;verticalAlign=top;align=left;fontSize=12;fontStyle=1;fontColor=#334155;spacingLeft=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="240" y="100" width="1180" height="620" as="geometry"/>
+        </mxCell>
+        <mxCell id="web" value="Сайт
+PHP + React.js
+витрина + заявка-лид" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#BFDBFE;strokeColor=#2563EB;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="200" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="ib" value="Интернет-банк
+ASP.NET MVC 4.5 + MS SQL
+платежи, счета, вход в депозиты" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#BFDBFE;strokeColor=#2563EB;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="280" y="300" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep" value="Контур заявок и ставок (новый)
+API + MS SQL + исходящий буфер
+команда банка, без ядра подрядчика" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#99F6E4;strokeColor=#0D9488;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="580" y="220" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="abs" value="АБС
+Delphi + Oracle / PL-SQL
+договор, проводка, открытие вклада" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#FDBA74;strokeColor=#EA580C;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="960" y="220" width="260" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="cc" value="Система кол-центра
+React + Spring Boot + PostgreSQL
+платформа подрядчика" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#BFDBFE;strokeColor=#2563EB;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="580" y="420" width="260" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="sms" value="СМС-шлюз
+сопровождает IT банка" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;arcSize=8;fillColor=#BFDBFE;strokeColor=#2563EB;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="960" y="430" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="tel" value="Телеком-оператор
+доставка СМС" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;dashed=1;dashPattern=8 8;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;fontStyle=1;fontColor=#78350F;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="140" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="pcc" value="Партнёрский КЦ
+вне MVP (+R4)" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;dashed=1;dashPattern=8 8;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;fontStyle=1;fontColor=#78350F;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="620" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="UC1 каталог, UC2 заявка (ФИО, телефон)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-new" target="web">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="UC5 каталог, UC6 заявка + СМС, UC10 статус" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-ex" target="ib">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="UC3 звонок по лиду, спецставка" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-cc" target="cc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="UC7 подтверждает условия и открывает вклад" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-bo" target="abs">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="UC4 идентификация, договор" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-fo" target="abs">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="UC9 ведёт ставки (не Excel)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-cr" target="dep" entryX="1" entryY="0.35">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="UC9 тоже смотрит/правит ставки" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="p-bo" target="dep" entryX="1" entryY="0.15">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="HTTPS: каталог и создание заявки" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#2563EB;" edge="1" parent="1" source="web" target="dep">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="HTTPS: каталог, заявка, OTP, статус" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#2563EB;" edge="1" parent="1" source="ib" target="dep">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="асинхронно: лид в очередь КЦ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#0D9488;dashed=1;dashPattern=6 6;" edge="1" parent="1" source="dep" target="cc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="асинхронно: задача бэку (не API АБС с канала)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#0D9488;dashed=1;dashPattern=6 6;" edge="1" parent="1" source="dep" target="abs">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="статус «открыт / отказ» обратно в контур" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#0D9488;dashed=1;dashPattern=6 6;" edge="1" parent="1" source="abs" target="dep">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="UC8: ставка подтверждена / вклад открыт; OTP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#2563EB;" edge="1" parent="1" source="dep" target="sms">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="отправка" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#2563EB;" edge="1" parent="1" source="sms" target="tel">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="СМС клиенту" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#4F46E5;" edge="1" parent="1" source="tel" target="p-ex">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1320" y="360"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="нет доступа к заявкам сайта" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;fontSize=10;fontColor=#64748B;labelBackgroundColor=#FFFFFF;strokeColor=#94A3B8;dashed=1;dashPattern=1 8;" edge="1" parent="1" source="pcc" target="cc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="leg" value="&lt;b&gt;Как читать&lt;/b&gt;&lt;br&gt;&lt;font color='#4F46E5'&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; человек в интерфейсе или получает СМС.&lt;br&gt;&lt;font color='#2563EB'&gt;&lt;b&gt;━━&lt;/b&gt;&lt;/font&gt; синхронный вызов канала (HTTPS/TLS).&lt;br&gt;&lt;font color='#0D9488'&gt;&lt;b&gt;- - -&lt;/b&gt;&lt;/font&gt; асинхронная доставка: заявка не ждёт АБС и КЦ.&lt;br&gt;&lt;font color='#94A3B8'&gt;&lt;b&gt;- · -&lt;/b&gt;&lt;/font&gt; вне MVP: партнёрский КЦ не подключаем.&lt;br&gt;Каналы &lt;b&gt;не открывают&lt;/b&gt; вклад: проводка только в АБС после бэка или визита (F11, +R2)." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F8FAFC;strokeColor=#94A3B8;fontSize=11;fontColor=#1F2937;spacingLeft=10;spacingRight=10;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="240" y="740" width="1180" height="130" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
